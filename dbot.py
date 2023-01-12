@@ -1,4 +1,5 @@
 import discord, openpyxl, os, asyncio
+from keep_alive import keep_alive
 from discord.ext import commands
 from openpyxl import load_workbook, Workbook
 from openpyxl.utils import get_column_letter
@@ -126,5 +127,5 @@ async def reset(ctx):
 @bot.command()
 async def hello(ctx):
     await ctx.send(f'{ctx.author.mention}님 안녕하세요!')
-
+keep_alive()
 bot.run(os.environ['token'])
