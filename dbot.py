@@ -98,10 +98,10 @@ async def 활약도랭킹(ctx):
     embed = discord.Embed(title='이달의 활약도 랭킹', description='20위 까지만 표시', color=0x4432a8)
     if ws.max_row > 21:
         for n in range(20):
-            embed.add_field(name=f'{rankScore(us)[n][2]}', value =f'{rankScore(us)[n][1]}', inline = True)  
+            embed.add_field(name=f'{rankScore(us)[n][2]}', value =f'{rankScore(us)[n][1]}', inline = False)  
     else:
         for n in range(ws.max_row-1):
-            embed.add_field(name=f'{rankScore(us)[n][2]}', value =f'{rankScore(us)[n][1]}', inline = True)       
+            embed.add_field(name=f'{rankScore(us)[n][2]}', value =f'{rankScore(us)[n][1]}', inline = False)       
     await ctx.send(embed = embed)
 
 @bot.command()
