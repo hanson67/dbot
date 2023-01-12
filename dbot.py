@@ -1,4 +1,4 @@
-import discord, openpyxl
+import discord, openpyxl, os, asyncio
 from discord.ext import commands
 from openpyxl import load_workbook, Workbook
 from openpyxl.utils import get_column_letter
@@ -127,4 +127,4 @@ async def reset(ctx):
 async def hello(ctx):
     await ctx.send(f'{ctx.author.mention}님 안녕하세요!')
 
-bot.run('MTA2MjA0NTIyODMyNTkzNzM1NA.GZXxgo.BEwPTBxvwzzLciwobhRTUEsLlB7KjkYaGlSar8')
+bot.run(os.environ['token'])
