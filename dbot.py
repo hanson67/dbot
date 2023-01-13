@@ -1,5 +1,4 @@
 import discord, openpyxl, os, asyncio
-from keep_alive import keep_alive
 from discord.ext import commands
 from openpyxl import load_workbook, Workbook
 from openpyxl.utils import get_column_letter
