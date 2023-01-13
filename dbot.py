@@ -169,4 +169,4 @@ async def hello(ctx):
   await ctx.send(f'{ctx.author.mention}님 안녕하세요!')
 
 
-bot.run([TOKEN])
+bot.run(TOKEN)
