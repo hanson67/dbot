@@ -88,6 +88,7 @@ async def 등록(ctx, mcname):
   #print(ctx.author.id)
   if checkName(ctx.author.id) is True:
     signup(ctx.author.id, ctx.author.name, mcname)
+#    await ctx.member.edit(nick=f'{mcname}(미정)')
     await ctx.send('등록이 완료되었습니다.')
   else:
     await ctx.send('이미 가입하셨습니다.')
@@ -107,7 +108,7 @@ async def 활약도(ctx):
 
 
 @bot.command()
-async def 유저디(ctx, user: discord.User):
+async def 소속배정(ctx, user: discord.User):
   print(user.id)
 
 
@@ -168,4 +169,4 @@ async def hello(ctx):
   await ctx.send(f'{ctx.author.mention}님 안녕하세요!')
 
 
-bot.run(TOKEN)
+bot.run([TOKEN])
