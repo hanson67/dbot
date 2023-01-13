@@ -14,6 +14,7 @@ bot = commands.Bot(command_prefix='!',
 c_id = 1
 c_score = 2
 c_name = 3
+c_mcname = 4
 
 default_score = 0
 wb = load_workbook('userDBX.xlsx')
@@ -37,12 +38,13 @@ def checkRow():
       break
 
 
-def signup(_id, _name):
+def signup(_id, _name, _mcname):
   _row = checkRow()
 
   ws.cell(row=_row, column=c_id, value=str(float(_id)))
   ws.cell(row=_row, column=c_score, value=default_score)
   ws.cell(row=_row, column=c_name, value=_name)
+  ws.cell(row=_row, column=c_mcname, value=_mcname)
 
   wb.save('userDBX.xlsx')
 
@@ -81,11 +83,11 @@ def rankScore(lst):
 
 
 @bot.command()
-async def 등록(ctx):
+async def 등록(ctx, mcname):
   #print(ctx.author.name)
   #print(ctx.author.id)
   if checkName(ctx.author.id) is True:
-    signup(ctx.author.id, ctx.author.name)
+    signup(ctx.author.id, ctx.author.name, mcname)
     await ctx.send('등록이 완료되었습니다.')
   else:
     await ctx.send('이미 가입하셨습니다.')
