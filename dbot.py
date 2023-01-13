@@ -3,8 +3,8 @@ from discord.ext import commands
 from openpyxl import load_workbook, Workbook
 from openpyxl.utils import get_column_letter
 
-PREFIX = os.envirion['PREFIX']
-TOKEN = os.envirion['TOKEN']
+PREFIX = os.environ['PREFIX']
+TOKEN = os.environ['TOKEN']
 game = discord.Game('앙')
 bot = commands.Bot(command_prefix='!',
                    intents=discord.Intents.all(),
