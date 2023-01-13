@@ -4,7 +4,8 @@ from discord.ext import commands
 from openpyxl import load_workbook, Workbook
 from openpyxl.utils import get_column_letter
 
-token = 'MTA2MjA0NTIyODMyNTkzNzM1NA.G8uJST.zh10nTMq3uYNB2ow5ZCc6DrZOdQx1g9H_FOZpo'
+PREFIX = os.evirion.['PREFIX']
+TOKEN = os.evirion.['TOKEN']
 game = discord.Game('앙')
 bot = commands.Bot(command_prefix='!',
                    intents=discord.Intents.all(),
@@ -167,4 +168,4 @@ async def hello(ctx):
 
 
 keep_alive()
-bot.run(token)
+bot.run(TOKEN)
