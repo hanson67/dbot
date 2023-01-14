@@ -11,13 +11,14 @@ bot = commands.Bot(command_prefix='!',
                    status=discord.Status.online,
                    activity=game)
 
+open('userDBX.xlsx', 'wb')
 c_id = 1
 c_score = 2
 c_name = 3
 c_mcname = 4
 
 default_score = 0
-wb = load_workbook('C:\Users\user\Desktop\dbot\userDBX.xlsx')
+wb = load_workbook('userDBX.xlsx')
 ws = wb.active
 
 
