@@ -12,7 +12,7 @@ bot = commands.Bot(command_prefix='!',
                    activity=game)
 
 currentPath = os.getcwd()
-os.chdir(currentPath)
+os.chdir('C:/Users/user/Desktop/dbot/')
 files = os.listdir(currentPath)
 @bot.command()
 async def t(ctx):
