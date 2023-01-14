@@ -10,7 +10,14 @@ bot = commands.Bot(command_prefix='!',
                    intents=discord.Intents.all(),
                    status=discord.Status.online,
                    activity=game)
-        
+
+currentPath = os.getcwd()
+os.chdir(currentPath)
+files = os.listdir(currentPath)
+@bot.command()
+async def t(ctx):
+    print(currentPath)
+    print("Files in %r: %s" % (currentPath, files))
 column_fist = 1
 column_sec = 2
 
