@@ -13,11 +13,11 @@ bot = commands.Bot(command_prefix='!',
 
 currentPath = os.getcwd()
 os.chdir('C:/Users/user/Desktop/dbot/')
-files = os.listdir(currentPath)
+files = os.listdir('C:/Users/user/Desktop/dbot/')
 @bot.command()
 async def t(ctx):
     print(currentPath)
-    print("Files in %r: %s" % (currentPath, files))
+    print("Files in %r: %s" % ('C:/Users/user/Desktop/dbot/', files))
 column_fist = 1
 column_sec = 2
 
