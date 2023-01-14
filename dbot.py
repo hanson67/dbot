@@ -46,7 +46,7 @@ def signup(_id, _name, _mcname):
   ws.cell(row=_row, column=c_name, value=_name)
   ws.cell(row=_row, column=c_mcname, value=_mcname)
 
-  wb.save('C:\Users\user\Desktop\dbot')
+  wb.save('@shinouneho2004d/dbot:main/dbot')
 
 
 def checkScore(_id):
