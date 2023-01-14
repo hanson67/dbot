@@ -14,7 +14,7 @@ bot = commands.Bot(command_prefix='!',
 column_fist = 1
 column_sec = 2
 
-wb = load_workbook('test.xlsx')
+wb = load_workbook('C:/Users/user/Desktop/dbot/test.xlsx')
 ws = wb.active
 
 def check(_id):
@@ -39,7 +39,7 @@ def input(_id):
   ws.cell(row=_row, column=column_fist, value=_id)
   ws.cell(row=_row, column=column_sec, value=0)
 
-  wb.save('C:\Users\user\Desktop\dbot\test.xlsx')
+  wb.save('test.xlsx')
 
 @bot.command()
 async def 테스트(ctx):
@@ -49,5 +49,4 @@ async def 테스트(ctx):
     await ctx.send('suc')
   else:
     await ctx.send('fail')
-
 bot.run(TOKEN)
