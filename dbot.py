@@ -11,7 +11,6 @@ bot = commands.Bot(command_prefix='!',
                    status=discord.Status.online,
                    activity=game)
 
-open('userDBX.xlsx', 'wb')
 c_id = 1
 c_score = 2
 c_name = 3
