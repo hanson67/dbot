@@ -46,7 +46,7 @@ def signup(_id, _name, _mcname):
   ws.cell(row=_row, column=c_name, value=_name)
   ws.cell(row=_row, column=c_mcname, value=_mcname)
 
-  wb.save('@shinouneho2004d/dbot:main/dbot')
+  wb.save('userDBX.xlsx')
 
 
 def checkScore(_id):
