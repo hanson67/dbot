@@ -3,8 +3,8 @@ from discord.ext import commands
 from openpyxl import load_workbook, Workbook
 from openpyxl.utils import get_column_letter
 
-#PREFIX = os.environ['PREFIX']
-#TOKEN = os.environ['TOKEN']
+PREFIX = os.environ['PREFIX']
+TOKEN = os.environ['TOKEN']
 game = discord.Game('test')
 bot = commands.Bot(command_prefix='!',
                    intents=discord.Intents.all(),
@@ -39,7 +39,7 @@ def input(_id):
   ws.cell(row=_row, column=column_fist, value=_id)
   ws.cell(row=_row, column=column_sec, value=0)
 
-  wb.save('test.xlsx')
+  wb.save('C:\Users\user\Desktop\dbot\test.xlsx')
 
 @bot.command()
 async def 테스트(ctx):
@@ -50,4 +50,4 @@ async def 테스트(ctx):
   else:
     await ctx.send('fail')
 
-bot.run('MTA2MjU5OTU0MDA5NzY3OTM2MA.GDa-CU.63sQWf21895B9MOmGxLMlPuJ2Il6c_ImKu_RXw')
+bot.run(TOKEN)
