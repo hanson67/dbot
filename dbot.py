@@ -82,6 +82,10 @@ def rankScore(lst):
   return lst
 
 
+@bot.commad()
+async def 경로(ctx):
+  path = os.path.dirname(os.path.abspath(__file__))
+  print(path)
 @bot.command()
 async def 등록(ctx, mcname):
   #print(ctx.author.name)
