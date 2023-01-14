@@ -46,7 +46,7 @@ def signup(_id, _name, _mcname):
   ws.cell(row=_row, column=c_name, value=_name)
   ws.cell(row=_row, column=c_mcname, value=_mcname)
 
-  wb.save('userDBX.xlsx')
+  wb.save('C:\Users\user\Desktop\dbot')
 
 
 def checkScore(_id):
@@ -82,10 +82,6 @@ def rankScore(lst):
   return lst
 
 
-@bot.command()
-async def 경로(ctx):
-  path = os.path.dirname(os.path.abspath(__file__))
-  print(path)
 @bot.command()
 async def 등록(ctx, mcname):
   #print(ctx.author.name)
