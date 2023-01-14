@@ -17,7 +17,7 @@ c_name = 3
 c_mcname = 4
 
 default_score = 0
-wb = load_workbook('userDBX.xlsx')
+wb = load_workbook('C:\Users\user\Desktop\dbot\userDBX.xlsx')
 ws = wb.active
 
 
